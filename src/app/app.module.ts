@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MedicosComponent } from './intermedio/spies/medicos.component';
 import { MedicosService } from './intermedio/spies/medicos.service';
+import { MedicoComponent } from './intermedio2/medico/medico.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MedicosComponent
+    MedicosComponent,
+    MedicoComponent
   ],
   imports: [
     BrowserModule
