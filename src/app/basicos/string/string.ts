@@ -1,3 +1,3 @@
 export function message( name: string ) {
-    return `Saludos ${name}`;
+    return `Hello ${name}`;
 }

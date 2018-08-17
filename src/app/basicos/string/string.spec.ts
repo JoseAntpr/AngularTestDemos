@@ -14,5 +14,12 @@ describe(' String tests', () => {
 
         expect( (typeof resp) ).toBe('string');
     });
+
+    it('Should return hello with name sent', () => {
+        const name = 'Jose';
+        const resp = message(name);
+
+        expect( resp ).toContain(name);
+    });
 });
 
