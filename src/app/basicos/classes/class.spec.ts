@@ -41,4 +41,11 @@ describe('Test case for classes', () => {
 
         expect(res).toBe(50);
     });
+
+    it('Should be return 0 hp if take 100 of damage', () => {
+
+        const res = player.takeDamage(100);
+
+        expect(res).toBe(0);
+    });
 });
