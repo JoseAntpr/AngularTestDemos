@@ -9,7 +9,7 @@ describe('Test case for arrays', () => {
         expect( res.length ).toBeGreaterThanOrEqual(3);
     });
 
-    it('Should exists Megaman & Robocop', () => {
+    xit('Should exists Megaman & Robocop', () => {
         const res = getRobots();
 
         expect( res ).toContain('Megaman');
