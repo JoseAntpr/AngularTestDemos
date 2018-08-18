@@ -32,4 +32,19 @@ describe('Incremendator Component', () => {
 
     });
 
+    it('Should show value of progress in input', () => {
+        component.cambiarValor(5);
+
+        fixture.detectChanges();
+
+        fixture.whenStable().then( () => {
+
+            const input = fixture.debugElement.query( By.css('input')).nativeElement;
+
+            expect( input.value ).toBe('55');
+
+        });
+
+    });
+
 });
