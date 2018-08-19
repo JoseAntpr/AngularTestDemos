@@ -47,4 +47,26 @@ describe('Incremendator Component', () => {
 
     });
 
+    it('Should increment/decrement with a click event in button', () => {
+        const buttons = fixture.debugElement.queryAll( By.css('.btn-primary'));
+
+        buttons[0].triggerEventHandler('click', null);
+        expect( component.progreso ).toBe(45);
+
+        buttons[1].triggerEventHandler('click', null);
+        expect( component.progreso ).toBe(50);
+    });
+
+    it('Should show progress in component title', () => {
+        const buttons = fixture.debugElement.queryAll( By.css('.btn-primary'));
+
+        buttons[0].triggerEventHandler('click', null);
+
+        fixture.detectChanges();
+
+        const elem: HTMLElement = fixture.debugElement.query(By.css('h3')).nativeElement;
+
+        expect( elem.innerHTML).toContain('45');
+    });
+
 });
